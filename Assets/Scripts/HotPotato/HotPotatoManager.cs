@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Potato : MonoBehaviour
 {
+    [SerializeField] private ER_GameManager gameManager;
+
     private Player holdingPlayer;
 
     private Vector3 positionOne = new Vector3(-5f, 0, 0);
@@ -24,7 +26,15 @@ public class Potato : MonoBehaviour
         timeHeld += Time.deltaTime;
         if (timeHeld >= timer)
         {
-            // Player holding it loses
+            if (holdingPlayer == Player.Player1)
+            {
+                gameManager.SelectWinner(Player.Player2);
+            }
+            else
+            {
+                gameManager.SelectWinner(Player.Player1);
+            }
+            
         }
 
         if (Input.GetKeyDown(KeyCode.W))
