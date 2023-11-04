@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722c9bf0d686e2e4b8afe2608e3f802a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 4785305112251863751}
+  allMiniGames:
+  - {fileID: 11400000, guid: 2ccce7609f9cb044b96fe73c93197449, type: 2}
 --- !u!1 &2475830093159313906
 GameObject:
   m_ObjectHideFlags: 0
