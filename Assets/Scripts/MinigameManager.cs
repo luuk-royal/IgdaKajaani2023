@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,6 +20,19 @@ public class MinigameManager : MonoBehaviour
     private Queue<MiniGameData> playedMiniGames = new Queue<MiniGameData>();
     private int avoidRepeatingLastN = 3;
     private MiniGameData currentMiniGame;
+
+    public static MinigameManager Instance { get; private set; }
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     private void Update()
     {
