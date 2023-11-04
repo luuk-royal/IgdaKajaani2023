@@ -10,7 +10,7 @@ public class ER_GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI playerWinText;
 
     private Player winnerPlayer;
-    private bool gameOver;
+    public bool gameOver;
 
     public void Continue()
     {

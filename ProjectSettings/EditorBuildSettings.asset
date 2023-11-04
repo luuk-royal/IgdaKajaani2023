@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneLoader.unity
     guid: 656fa160c7319f54987d1725fe39c653
+  - enabled: 1
+    path: Assets/Scenes/FireBlower.unity
+    guid: df3b9d308cfc109488f6e61961421b33
+  - enabled: 1
+    path: Assets/Scenes/EndlessRunner.unity
+    guid: 8cd8c3ff6023490498ec26ef13c148de
   m_configObjects: {}

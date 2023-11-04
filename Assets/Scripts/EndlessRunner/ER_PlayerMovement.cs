@@ -17,6 +17,8 @@ public class ER_PlayerMovement : MonoBehaviour
     [SerializeField] private ControlScheme controlScheme = ControlScheme.WASD;
 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private bool isGrounded;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform groundCheck;
@@ -43,6 +45,9 @@ public class ER_PlayerMovement : MonoBehaviour
     {
         float moveHorizontal = Input.GetKey(KeyCode.A) ? -1 : Input.GetKey(KeyCode.D) ? 1 : 0;
 
+        animator.SetBool("isRunning", moveHorizontal != 0);
+        spriteRenderer.flipX = moveHorizontal == 1 ? false : true ;
+
         if (isGrounded && Input.GetKeyDown(KeyCode.W))
         {
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
@@ -54,6 +59,9 @@ public class ER_PlayerMovement : MonoBehaviour
     private void ArrowKeyControls()
     {
         float moveHorizontal = Input.GetKey(KeyCode.LeftArrow) ? -1 : Input.GetKey(KeyCode.RightArrow) ? 1 : 0;
+
+        animator.SetBool("isRunning", moveHorizontal != 0);
+        spriteRenderer.flipX = moveHorizontal == 1 ? false : true;
 
         if (isGrounded && Input.GetKeyDown(KeyCode.UpArrow))
         {

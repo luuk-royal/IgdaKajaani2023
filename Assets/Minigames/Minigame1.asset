@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddda2607c1997947858922d7cb688c4, type: 3}
   m_Name: Minigame1
   m_EditorClassIdentifier: 
-  sceneName: MiniGame1
+  sceneName: FireBlower
   score: 1

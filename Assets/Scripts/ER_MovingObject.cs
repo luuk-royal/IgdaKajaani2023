@@ -47,7 +47,7 @@ public class ER_MovingObject : MonoBehaviour
             frontIsFront = !frontIsFront;
         }
 
-        speed += 0.0005f;
+        speed += 0.1f * Time.deltaTime;
     }
 
     private GameObject GetRandomBlock()
