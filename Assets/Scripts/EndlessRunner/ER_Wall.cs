@@ -26,7 +26,7 @@ public class ER_Wall : MonoBehaviour
 
             if (playerMovement != null)
             {
-                gameManager.SelectWinner(playerMovement.player);
+                ER_GameManager.Instance.SelectWinner(playerMovement.player);
                 Destroy(playerMovement.gameObject);
             }
         }

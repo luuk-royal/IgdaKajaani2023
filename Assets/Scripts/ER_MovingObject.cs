@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ER_MovingObject : MonoBehaviour
 {
-    private float speed = 2f;
+    private float speed = 5f;
     private float resetPositionX = -30f;
     [SerializeField] private float startPositionX = 10f;
 
