@@ -2043,7 +2043,8 @@ MonoBehaviour:
   playerOneText: {fileID: 612685825}
   playerTwoText: {fileID: 317094100}
   timeLeftText: {fileID: 1189135562}
-  animator: {fileID: 1344827772}
+  animatorOne: {fileID: 1344827772}
+  animatorTwo: {fileID: 1227652980}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
