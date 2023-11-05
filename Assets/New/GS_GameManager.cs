@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GS_GameManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GS_GameManager : MonoBehaviour
     public Sprite fireSprite;
 
     public List<Image> slots;
+    public List<TextMeshProUGUI> slotTexts;
 
     private Image correctSlot;
 
@@ -33,7 +35,10 @@ public class GS_GameManager : MonoBehaviour
 
         for (int i = 0; i < 4; i++)
         {
-            if(slots[i] != correctSlot)
+            slots[i].enabled = true;
+            slotTexts[i].enabled = false;
+
+            if (slots[i] != correctSlot)
             slots[i].sprite = randomSprites[Random.Range(0, randomSprites.Count)];
         }
 
