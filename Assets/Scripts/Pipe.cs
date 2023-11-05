@@ -1,28 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
 
-public class ER_Wall : MonoBehaviour
+public class Pipe : MonoBehaviour
 {
     [SerializeField] private ER_GameManager gameManager;
 
-
     private void Awake()
     {
-        if(gameManager == null)
+        if (gameManager == null)
         {
             gameManager = ER_GameManager.Instance;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.transform.CompareTag("Player"))
         {
-            var playerMovement = collision.GetComponent<JB_Player>();
+            var playerMovement = collision.transform.GetComponent<FB_Player>();
 
             if (playerMovement != null)
             {
@@ -31,5 +27,4 @@ public class ER_Wall : MonoBehaviour
             }
         }
     }
-
 }

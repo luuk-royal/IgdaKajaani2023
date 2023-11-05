@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.Events;
 
 public class ER_GameManager : MonoBehaviour
 {
@@ -11,6 +12,21 @@ public class ER_GameManager : MonoBehaviour
 
     private Player winnerPlayer;
     public bool gameOver;
+
+    public UnityEvent onGameOver;
+
+    public static ER_GameManager Instance { get; private set; }
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     public void Continue()
     {
@@ -24,7 +40,7 @@ public class ER_GameManager : MonoBehaviour
         gameOver = true;
         winnerPlayer = winner;
         playerWinText.text = $"Winner is {winnerPlayer}";
-
+        onGameOver?.Invoke();
         playerWinPanel.SetActive(true);
     }
 }
