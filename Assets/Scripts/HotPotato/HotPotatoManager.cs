@@ -1,12 +1,15 @@
 using UnityEngine;
 using TMPro;
 
-public class Potato : MonoBehaviour
+public class HotPotatoManager : MonoBehaviour
 {
 
     public TextMeshProUGUI playerOneText;
     public TextMeshProUGUI playerTwoText;
     public TextMeshProUGUI timeLeftText;
+
+    public Animator animatorOne;
+    public Animator animatorTwo;
 
     private Player holdingPlayer;
 
@@ -41,19 +44,22 @@ public class Potato : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeLeftText.text = $"{totalTime} S";
+        timeLeftText.text = $"{totalTime.ToString("F2")} S";
 
         timeHeld += Time.deltaTime;
         if (timeHeld >= timer)
         {
             if (holdingPlayer == Player.Player1)
             {
-                ER_GameManager.Instance.SelectWinner(Player.Player2);
+                animatorOne.SetTrigger("Death");
+                new WaitForSeconds(2.0f);
+                ER_GameManager.Instance.SelectWinner(Player.Player1);
                 Destroy(this);
             }
             else
             {
-                ER_GameManager.Instance.SelectWinner(Player.Player1);
+                animatorTwo.SetTrigger("Death");
+                ER_GameManager.Instance.SelectWinner(Player.Player2);
                 Destroy(this);
             }
             
@@ -83,7 +89,7 @@ public class Potato : MonoBehaviour
             if (timeHeld > scoreTimePlayerOne)
             {
                 scoreTimePlayerOne = timeHeld;
-                playerOneText.text = $"{scoreTimePlayerOne} S";
+                playerOneText.text = $"{scoreTimePlayerOne.ToString("F2")} S";
             }
         }
         else
@@ -91,17 +97,20 @@ public class Potato : MonoBehaviour
             if (timeHeld > scoreTimePlayerTwo)
             {
                 scoreTimePlayerTwo = timeHeld;
-                playerTwoText.text = $"{scoreTimePlayerTwo} S";
+                playerTwoText.text = $"{scoreTimePlayerTwo.ToString("F2")} S";
             }
         }
 
         if (scoreTimePlayerOne > scoreTimePlayerTwo)
         {
-            ER_GameManager.Instance.SelectWinner(Player.Player1);
+            animatorOne.SetTrigger("Death");
+            // animator.();
+            ER_GameManager.Instance.SelectWinner(Player.Player2);
             Destroy(this);
         } else
         {
-            ER_GameManager.Instance.SelectWinner(Player.Player2);
+            animatorTwo.SetTrigger("Death");
+            ER_GameManager.Instance.SelectWinner(Player.Player1);
             Destroy(this);
         }
     }
@@ -117,7 +126,7 @@ public class Potato : MonoBehaviour
                 if (timeHeld > scoreTimePlayerTwo)
                 {
                     scoreTimePlayerTwo = timeHeld;
-                    playerTwoText.text = $"{scoreTimePlayerTwo} S";
+                    playerTwoText.text = $"{scoreTimePlayerTwo.ToString("F2")} S";
                 }
             } else
             {
@@ -127,7 +136,7 @@ public class Potato : MonoBehaviour
                 if (timeHeld > scoreTimePlayerOne)
                 {
                     scoreTimePlayerOne = timeHeld;
-                    playerOneText.text = $"{scoreTimePlayerOne} S";
+                    playerOneText.text = $"{scoreTimePlayerOne.ToString("F2")} S";
                 }
             }
 
