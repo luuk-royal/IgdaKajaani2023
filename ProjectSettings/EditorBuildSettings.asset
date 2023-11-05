@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HotPotato.unity
     guid: ab50213d5438f2147be060576c7190e1
   - enabled: 1
+    path: Assets/Scenes/Burn Calories.unity
+    guid: cf239ee3ee3d92b4ab228317fa933110
+  - enabled: 1
     path: Assets/Scenes/Kekrigoat.unity
     guid: ef72496f8cb566d498b6b3628e63e7cd
   m_configObjects: {}

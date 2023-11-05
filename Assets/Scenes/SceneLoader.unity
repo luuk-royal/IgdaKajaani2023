@@ -134,56 +134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b41006d4a9283d3459b58a13e25740d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &246954121
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 246954123}
-  - component: {fileID: 246954122}
-  m_Layer: 0
-  m_Name: ErG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &246954122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 246954121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53974b1bb4418cf46af2342cc2beeca7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerWinPanel: {fileID: 0}
-  playerWinText: {fileID: 0}
-  gameOver: 0
-  onGameOver:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!4 &246954123
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 246954121}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9942151, y: 2.9221017, z: -0.07721957}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &496887098
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +333,7 @@ PrefabInstance:
       objectReference: {fileID: 147059334}
     - target: {fileID: 8187881483855277275, guid: 23bb159bfe5c2c04b986776b5ce6e3b0, type: 3}
       propertyPath: allMiniGames.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8187881483855277275, guid: 23bb159bfe5c2c04b986776b5ce6e3b0, type: 3}
       propertyPath: allMiniGames.Array.data[0]
@@ -412,7 +362,7 @@ PrefabInstance:
     - target: {fileID: 8187881483855277275, guid: 23bb159bfe5c2c04b986776b5ce6e3b0, type: 3}
       propertyPath: allMiniGames.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: 004b4523e76a14845a2614ec0caf7ef4, type: 2}
+      objectReference: {fileID: 11400000, guid: a4e3ca9ac636a1a4e89a4f0f34dd8052, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -424,4 +374,3 @@ SceneRoots:
   m_Roots:
   - {fileID: 496887101}
   - {fileID: 500989870}
-  - {fileID: 246954123}
