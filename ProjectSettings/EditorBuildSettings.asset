@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndlessRunner.unity
     guid: 8cd8c3ff6023490498ec26ef13c148de
+  - enabled: 1
+    path: Assets/New/Scenes/FlappyBird.unity
+    guid: 05abc5aabb394764db1a38f4c1467ec1
+  - enabled: 1
+    path: Assets/New/Scenes/Reaction.unity
+    guid: 90ee7bd21e2b5c2498bbe999b189a16d
   m_configObjects: {}
