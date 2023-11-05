@@ -3,7 +3,6 @@ using TMPro;
 
 public class Potato : MonoBehaviour
 {
-    public ER_GameManager gameManager;
 
     public TextMeshProUGUI playerOneText;
     public TextMeshProUGUI playerTwoText;
@@ -49,11 +48,13 @@ public class Potato : MonoBehaviour
         {
             if (holdingPlayer == Player.Player1)
             {
-                gameManager.SelectWinner(Player.Player2);
+                ER_GameManager.Instance.SelectWinner(Player.Player2);
+                Destroy(this);
             }
             else
             {
-                gameManager.SelectWinner(Player.Player1);
+                ER_GameManager.Instance.SelectWinner(Player.Player1);
+                Destroy(this);
             }
             
         }
@@ -96,10 +97,12 @@ public class Potato : MonoBehaviour
 
         if (scoreTimePlayerOne > scoreTimePlayerTwo)
         {
-            gameManager.SelectWinner(Player.Player1);
+            ER_GameManager.Instance.SelectWinner(Player.Player1);
+            Destroy(this);
         } else
         {
-            gameManager.SelectWinner(Player.Player2);
+            ER_GameManager.Instance.SelectWinner(Player.Player2);
+            Destroy(this);
         }
     }
 
