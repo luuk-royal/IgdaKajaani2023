@@ -1859,7 +1859,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 886560637}
         m_TargetAssemblyTypeName: ER_GameManager, Assembly-CSharp
         m_MethodName: Continue
         m_Mode: 1

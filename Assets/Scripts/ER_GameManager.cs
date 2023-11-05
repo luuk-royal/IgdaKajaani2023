@@ -28,6 +28,16 @@ public class ER_GameManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (!gameOver) return;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Continue();
+        }
+    }
+
     public void Continue()
     {
         MinigameManager.Instance.SelectWinner(winnerPlayer);

@@ -6,15 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MiniGame1.unity
-    guid: 044f15c9e371b4743ba8ffcef6109a45
-  - enabled: 1
-    path: Assets/Scenes/MiniGame2.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
-    path: Assets/Scenes/MiniGame3.unity
-    guid: 5df246f307ef94949a790501dfad9d45
-  - enabled: 1
     path: Assets/Scenes/SceneLoader.unity
     guid: 656fa160c7319f54987d1725fe39c653
   - enabled: 1
@@ -27,6 +18,12 @@ EditorBuildSettings:
     path: Assets/New/Scenes/FlappyBird.unity
     guid: 05abc5aabb394764db1a38f4c1467ec1
   - enabled: 1
+    path: Assets/New/Scenes/Jumping.unity
+    guid: 3ac80561160510b438cd4d9ca8623d00
+  - enabled: 1
     path: Assets/New/Scenes/Reaction.unity
     guid: 90ee7bd21e2b5c2498bbe999b189a16d
+  - enabled: 1
+    path: Assets/Scenes/HotPotato.unity
+    guid: ab50213d5438f2147be060576c7190e1
   m_configObjects: {}
