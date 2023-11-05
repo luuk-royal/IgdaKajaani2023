@@ -12,6 +12,19 @@ public class ER_GameManager : MonoBehaviour
     private Player winnerPlayer;
     public bool gameOver;
 
+    public static ER_GameManager Instance { private set; get; } = null;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public void Continue()
     {
         MinigameManager.Instance.SelectWinner(winnerPlayer);
