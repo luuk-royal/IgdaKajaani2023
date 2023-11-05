@@ -406,7 +406,19 @@ MonoBehaviour:
   gameOver: 0
   onGameOver:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1262136850}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &361137053
 Transform:
   m_ObjectHideFlags: 0
@@ -1017,6 +1029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba39275e5e52c1408055b32f02a5035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 361137052}
 --- !u!1 &985616016
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,9 +2108,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1607301435}
   - component: {fileID: 1607301434}
+  - component: {fileID: 1607301436}
   - component: {fileID: 1607301432}
   - component: {fileID: 1607301431}
-  - component: {fileID: 1607301436}
   m_Layer: 7
   m_Name: Player 2
   m_TagString: Player
@@ -2167,34 +2180,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
-<<<<<<< HEAD
-=======
---- !u!114 &1607301433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1607301430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26fbed17d214bf4e844c1dc9f8c71e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 7
-  jumpForce: 30
-  controlScheme: 1
-  rb: {fileID: 1607301432}
-  animator: {fileID: 437456616}
-  spriteRenderer: {fileID: 437456614}
-  isGrounded: 0
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  groundCheck: {fileID: 1581129537}
-  groundCheckRadius: 0.2
-  player: 0
->>>>>>> c4afd7838cdd9bae1f04af476e7cd1db1963eba0
 --- !u!212 &1607301434
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2276,18 +2261,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 139118ee0f8e2cf47bbc6d20888b6768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 7
+  moveSpeed: 7
+  jumpForce: 30
   maxJumpTime: 0.5
   groundCheck: {fileID: 1581129537}
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  controlScheme: 0
+  controlScheme: 1
   animator: {fileID: 437456616}
   spriteRenderer: {fileID: 437456614}
-  player: 0
+  player: 1
 --- !u!1 &1645128244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2527,34 +2512,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
-<<<<<<< HEAD
-=======
---- !u!114 &2039177802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039177799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26fbed17d214bf4e844c1dc9f8c71e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 7
-  jumpForce: 30
-  controlScheme: 0
-  rb: {fileID: 2039177801}
-  animator: {fileID: 1295776818}
-  spriteRenderer: {fileID: 1295776819}
-  isGrounded: 0
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  groundCheck: {fileID: 1645128245}
-  groundCheckRadius: 0.2
-  player: 1
->>>>>>> c4afd7838cdd9bae1f04af476e7cd1db1963eba0
 --- !u!212 &2039177803
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2671,18 +2628,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 139118ee0f8e2cf47bbc6d20888b6768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 7
+  moveSpeed: 7
+  jumpForce: 30
   maxJumpTime: 0.5
   groundCheck: {fileID: 1645128245}
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  controlScheme: 1
+  controlScheme: 0
   animator: {fileID: 1295776818}
   spriteRenderer: {fileID: 1295776819}
-  player: 1
+  player: 0
 --- !u!1 &2058522282
 GameObject:
   m_ObjectHideFlags: 0

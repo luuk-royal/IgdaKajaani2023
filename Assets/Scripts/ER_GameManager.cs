@@ -37,6 +37,15 @@ public class ER_GameManager : MonoBehaviour
     {
         if (gameOver) return;
 
+        if(winner  == Player.Player1)
+        {
+            winner = Player.Player2;
+        }        
+        else if(winner  == Player.Player2)
+        {
+            winner = Player.Player1;
+        }
+
         gameOver = true;
         winnerPlayer = winner;
         playerWinText.text = $"Winner is {winnerPlayer}";

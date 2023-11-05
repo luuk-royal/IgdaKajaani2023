@@ -21,7 +21,7 @@ public class JB_Player : MonoBehaviour
     private bool isGrounded;
     [SerializeField] private ControlScheme controlScheme = ControlScheme.WASD;
     private float jumpVel;
-    [SerializeField] private Animator animator;
+    public Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
     public Player player;
 
