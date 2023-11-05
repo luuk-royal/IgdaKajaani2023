@@ -51,14 +51,14 @@ public class HotPotatoManager : MonoBehaviour
         {
             if (holdingPlayer == Player.Player1)
             {
-                animatorOne.SetTrigger("Death");
+                animatorTwo.SetTrigger("Death");
                 new WaitForSeconds(2.0f);
                 ER_GameManager.Instance.SelectWinner(Player.Player1);
                 Destroy(this);
             }
             else
             {
-                animatorTwo.SetTrigger("Death");
+                animatorOne.SetTrigger("Death");
                 ER_GameManager.Instance.SelectWinner(Player.Player2);
                 Destroy(this);
             }
