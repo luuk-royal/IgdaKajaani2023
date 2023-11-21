@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SceneLoader.unity
+    guid: 656fa160c7319f54987d1725fe39c653
+  - enabled: 1
+    path: Assets/Scenes/FireBlower.unity
+    guid: df3b9d308cfc109488f6e61961421b33
+  - enabled: 1
+    path: Assets/Scenes/EndlessRunner.unity
+    guid: 8cd8c3ff6023490498ec26ef13c148de
+  - enabled: 1
+    path: Assets/New/Scenes/FlappyBird.unity
+    guid: 05abc5aabb394764db1a38f4c1467ec1
+  - enabled: 1
+    path: Assets/New/Scenes/Jumping.unity
+    guid: 3ac80561160510b438cd4d9ca8623d00
+  - enabled: 1
+    path: Assets/New/Scenes/Reaction.unity
+    guid: 90ee7bd21e2b5c2498bbe999b189a16d
+  - enabled: 1
+    path: Assets/Scenes/HotPotato.unity
+    guid: ab50213d5438f2147be060576c7190e1
+  - enabled: 1
+    path: Assets/Scenes/Burn Calories.unity
+    guid: cf239ee3ee3d92b4ab228317fa933110
+  - enabled: 1
+    path: Assets/Scenes/Kekrigoat.unity
+    guid: ef72496f8cb566d498b6b3628e63e7cd
+  m_configObjects: {}
